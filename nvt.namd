@@ -1,0 +1,95 @@
+structure          ionized.psf
+coordinates        ionized.pdb
+
+set temperature    310 
+
+# starting from scratch
+temperature         $temperature    ;# initialize velocities randomly
+
+outputName         myoutput   ;# base name for output from this run
+
+restartfreq         500     ;# 500 steps = every 1ps
+dcdfreq             500
+xstFreq             500
+
+outputEnergies      100     ;# 100 steps = every 0.2 ps
+outputTiming       1000     ;# shows time per step and time to completion
+
+# Force-Field Parameters
+paraTypeCharmm	    on
+parameters          par_all27_prot_lipid.inp 
+
+# These are specified by CHARMM
+exclude             scaled1-4
+1-4scaling          1.0
+switching           on
+
+# You have some freedom choosing the cutoff
+cutoff              12. ;# may use smaller, maybe 10., with PME
+switchdist          10. ;# cutoff - 2.
+
+# Promise that atom won't move more than 2A in a cycle
+pairlistdist        14. ;# cutoff + 2.
+
+stepspercycle       10   ;# redo pairlists every ten steps
+
+# Integrator Parameters
+timestep            2.0  ;# 2fs/step
+rigidBonds          all  ;# needed for 2fs steps
+nonbondedFreq       1    ;# nonbonded forces every step
+fullElectFrequency  2    ;# PME only every other step
+
+# Constant Temperature Control
+langevin            on            ;# langevin dynamics
+langevinDamping     1.            ;# damping coefficient of 1/ps
+langevinTemp        $temperature  ;# random noise at this level
+langevinHydrogen    no            ;# don't couple bath to hydrogens
+
+# Periodic Boundary conditions
+cellBasisVector1    31.2   0.   0.  ;# vector to the next image
+cellBasisVector2     0.   44.8  0.
+cellBasisVector3     0.    0   51.3
+cellOrigin           0.    0.   0.  ;# the *center* of the cell
+
+wrapWater           on              ;# wrap water to central cell
+wrapAll             on              ;# wrap other molecules too
+wrapNearest         off             ;# use for non-rectangular cells
+
+#PME (for full-system periodic electrostatics)
+PME                 yes
+
+# let NAMD determine grid
+PMEGridSpacing      1.0
+
+# manually specify grid
+#PMEGridSizeX        32  ;# 2^5, close to 31.2
+#PMEGridSizeY        45  ;# 3^2 * 5, close to 44.8
+#PMEGridSizeZ        54  ;# 2 * 3^3, close to 51.3
+
+# Constant Pressure Control (variable volume)
+#useGroupPressure      yes ;# needed for rigid bonds
+#useFlexibleCell       no  ;# no for water box, yes for membrane
+#useConstantArea       no  ;# no for water box, maybe for membrane
+
+langevinPistonPeriod to ensure that harmonic oscillations in the periodic cell are overdamped.
+
+langevinPiston        on
+langevinPistonTarget  1.01325      ;# pressure in bar -> 1 atm
+langevinPistonPeriod  100.         ;# oscillation period around 100 fs
+langevinPistonDecay   50.          ;# oscillation decay time of 50 fs
+langevinPistonTemp    $temperature ;# coupled to heat bath
+
+fixedAtoms          on
+fixedAtomsFile      myfixedatoms.pdb  ;# flags are in this file
+fixedAtomsCol       B                 ;# set beta non-zero to fix an atom
+
+IMDon           on
+IMDport         3000    ;# port number (enter it in VMD)
+IMDfreq         1       ;# send every 1 frame
+IMDwait         no      ;# wait for VMD to connect before running?
+
+with two different NAMD runs using the numsteps and minimization options. Scripting commands such as those below override numsteps.
+
+minimize            1000          ;# lower potential energy for 1000 steps
+reinitvels          $temperature  ;# since minimization zeros velocities
+run 50000 ;# 100ps
