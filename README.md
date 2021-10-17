@@ -5,4 +5,4 @@ Especially, for example, modify "input" and "parameter" section inside the confi
 This is for a general solution simulation for a RCSB PDB structure with a ligand, with a special foucs on small molecule ligand.
 This notebook take http://zarbi.chem.yale.edu/ligpargen/namd_tutorial.html as a general refernce
 
-I hope later this notebook could be updated to be able to use independently on colab, but for now, you still need to use it with your local VMD.
+You could also use this script to simulate a docked complex, but in that case, more extra work outside of this notebook are supposed to be done, mainly in manuplating the complex.pdb file in a text editing tool such as sublime text, changing the atom numbering and chain name etc.
