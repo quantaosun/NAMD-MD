@@ -11,4 +11,6 @@ For proteins with multiple chains, this notebook might be problematic, you are s
 
 USAGE: The primary goal is to generate two files, called ionized.pdb and ionized.psf, then you define a NAMD configuration file sources these two file to carry out a simultion, wtih protein parameter files and small molecule parameter files defined, as per in the above "min.conf", CHANGE the file path if you need to.
 
+NOTE, you need to include the provided water topology/parameter files in the configration file to prevent a "vdw parameter not found for atom type OT" error.
+
 
