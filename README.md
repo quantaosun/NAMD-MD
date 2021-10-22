@@ -1,5 +1,5 @@
 # NAMD-MD
-To run a simulation, first run the "namd3 nvt.namd" then run the "namd3 npt.namd", finally run "namd3 production.namd"
+To run a simulation, first run the "namd3 nvt.namd" then run the "namd3 npt.namd", finally run "namd3 production.namd". If you want to manke it even better, you then need to define some restrain by yourself, which is out of the scope of this repository.
 
 You could use namd configuration files listed above, or generate your own, some references are 
 https://www.iitg.ac.in/tamalb/karp/namd/cf.html and https://www.ks.uiuc.edu/Training/Tutorials/namd/namd-tutorial-unix-html/node26.html 
