@@ -1,6 +1,5 @@
 # NAMD-MD
-CAUTION： The notebook example is NOT PERFECT, your need some MODIFICATION in terms of names, file path etc., before you could actually run a simulation.
-Especially, for example, modify "input" and "parameter" section inside the confiles before running.
+To run a simulation, first run the "namd3 nvt.namd" then run the "namd3 npt.namd", finally run "namd3 production.namd"
 
 COLAB example https://github.com/quantaosun/NAMD-MD/blob/main/NAMD_MD.ipynb 
 
