@@ -1,7 +1,8 @@
 # NAMD-MD
 To run a simulation, first run the "namd3 nvt.namd" then run the "namd3 npt.namd", finally run "namd3 production.namd"
 
-COLAB example https://github.com/quantaosun/NAMD-MD/blob/main/NAMD_MD.ipynb 
+You could use namd configuration files listed above, or generate your own, some references are 
+https://www.iitg.ac.in/tamalb/karp/namd/cf.html and https://www.ks.uiuc.edu/Training/Tutorials/namd/namd-tutorial-unix-html/node26.html 
 
 This is for a general solution simulation for a RCSB PDB structure with a ligand, with a special foucs on small molecule ligand.
 This notebook take http://zarbi.chem.yale.edu/ligpargen/namd_tutorial.html as a general refernce
