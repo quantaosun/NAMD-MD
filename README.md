@@ -4,7 +4,7 @@
   <img width="485" alt="Screen Shot 2021-10-23 at 8 15 26 PM" src="https://user-images.githubusercontent.com/75652473/138555675-d44e01b9-5486-4140-b2ec-64a99c460c50.png">
 </p>
 
-To run a simulation, first run the "namd3 nvt.namd" then run the "namd3 npt.namd", finally run "namd3 production.namd". If you want to manke it even better, you then need to define some restrain by yourself, which is out of the scope of this repository.
+To run a simulation, first run the "namd3 nvt.namd" then run the "namd3 npt.namd", finally run "namd3 production.namd". If you want to make it even better, you then need to define some restrain by yourself, which is out of the scope of this repository.
 
 You could use namd configuration files listed above, or generate your own, some references are 
 https://www.iitg.ac.in/tamalb/karp/namd/cf.html and https://www.ks.uiuc.edu/Training/Tutorials/namd/namd-tutorial-unix-html/node26.html 
