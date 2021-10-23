@@ -2,11 +2,14 @@
 
 <img width="485" alt="Screen Shot 2021-10-23 at 8 15 26 PM" src="https://user-images.githubusercontent.com/75652473/138555675-d44e01b9-5486-4140-b2ec-64a99c460c50.png">
 
-<div>
+<div class="center">
+
 
 <img width="485" alt="Screen Shot 2021-10-23 at 8 15 26 PM" src="https://user-images.githubusercontent.com/75652473/138555675-d44e01b9-5486-4140-b2ec-64a99c460c50.png">
 
+
 </div>
+
 
 To run a simulation, first run the "namd3 nvt.namd" then run the "namd3 npt.namd", finally run "namd3 production.namd". If you want to manke it even better, you then need to define some restrain by yourself, which is out of the scope of this repository.
 
