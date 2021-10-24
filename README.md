@@ -3,7 +3,7 @@
 <p align="center">
   <img width="485" alt="Screen Shot 2021-10-23 at 8 15 26 PM" src="https://user-images.githubusercontent.com/75652473/138555675-d44e01b9-5486-4140-b2ec-64a99c460c50.png">
 </p>
-USAGE: The primary goal is to generate two files, called ionized.pdb and ionized.psf, then you define a NAMD configuration file sources these two file to carry out a simultion, wtih protein parameter files and small molecule parameter files defined, as per in the above "min.conf", CHANGE the file path if you need to.
+USAGE: The primary goal is to generate two files, called ionized.pdb and ionized.psf, then you define a NAMD configuration file sourceing these two file to carry out a simultion, wtih protein parameter files and small molecule parameter files defined, as per in the above "min.conf", CHANGE the file path if you need to.
 To run a simulation, first run the "namd3 nvt.namd" then run the "namd3 npt.namd", finally run "namd3 production.namd". If you want to make it even better, you then need to define some restrain by yourself, which is out of the scope of this repository.
 
 You could use namd configuration files listed above, or generate your own, some references are 
