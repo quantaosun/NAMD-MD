@@ -14,13 +14,15 @@ This notebook take http://zarbi.chem.yale.edu/ligpargen/namd_tutorial.html as a 
 
 You could also use this script to simulate a docked complex, but in that case, more extra work outside of this notebook are supposed to be done, mainly in manuplating the complex.pdb file in a text editing tool such as sublime text, changing the atom numbering (you might need excel in this case) and chain name etc. If you are not confident engough to do such tricy things, you are suggested to produced ionized.psf and ionized.pdb on your local vmd instead running step 4 in the notebook.
 
+Particularly, the "complex.pdb" need modification
+![image](https://user-images.githubusercontent.com/75652473/138555451-fd09349e-197b-4353-99e1-966015d57f71.png)
+
 For proteins with multiple chains, this notebook might be problematic, you are suggested to use CHARMM GUI INSTEAD.
 
 USAGE: The primary goal is to generate two files, called ionized.pdb and ionized.psf, then you define a NAMD configuration file sources these two file to carry out a simultion, wtih protein parameter files and small molecule parameter files defined, as per in the above "min.conf", CHANGE the file path if you need to.
 
 NOTE, you need to include the provided water topology/parameter files in the configration file to prevent a "vdw parameter not found for atom type OT" error.
-Particularly, the "complex.pdb" need modification
-![image](https://user-images.githubusercontent.com/75652473/138555451-fd09349e-197b-4353-99e1-966015d57f71.png)
+
 The configuration file need modification, like the "parameters" lines, and the PBC section.
 ![image](https://user-images.githubusercontent.com/75652473/138555517-f6562583-030c-4fa1-944c-a8d42bbbfe3a.png)
 
