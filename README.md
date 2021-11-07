@@ -1,5 +1,5 @@
 # NAMD-MD
-For any proteins with a broken backbone, a homology modelly is highly recommended in order to obtain to get a "perfect" structure with all gaps properly filled.
+For any proteins with a broken backbone, a homology modelly is highly recommended in order to obtain a "perfect" structure with all gaps properly filled.
 <p align="center">
 <img width="621" alt="Screen Shot 2021-11-07 at 7 57 55 PM" src="https://user-images.githubusercontent.com/75652473/140644062-76014951-35d5-4c66-8c5e-54c83b5616c5.png">
 </p>
