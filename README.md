@@ -1,6 +1,7 @@
 # NAMD-MD
-
+<p align="center">
 <img width="621" alt="Screen Shot 2021-11-07 at 7 57 55 PM" src="https://user-images.githubusercontent.com/75652473/140644062-76014951-35d5-4c66-8c5e-54c83b5616c5.png">
+</p>
 
 Note, the way of combining protein with ligand now is recommened to use pymol instead of mannually modification, relavent command for pymol has been included in notebook.
 
