@@ -30,8 +30,6 @@ The end of the comple.pdb file looks like:
   <img width="485" alt="Screen Shot 2021-10-23 at 8 15 26 PM" src="https://user-images.githubusercontent.com/75652473/141260155-977e07db-4baa-463c-8ba6-f817b223ca30.png">
 </p>
 
-For proteins with multiple chains, this notebook might be problematic, you are suggested to use CHARMM GUI INSTEAD.
-
 NOTE, you need to include the provided water topology/parameter files in the configration file to prevent a "vdw parameter not found for atom type OT" error.
 
 The configuration file need modification, like the "parameters" lines, and the PBC section.
