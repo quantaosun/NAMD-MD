@@ -3,11 +3,11 @@ mol delete all
 mol load pdb ../complex.pdb
 set bad [atomselect top "resname ACE"]
 if {[info exists bad]} {
-set chainB [atomselect top "chain B and not hydrogen and not resname ACE NME"]
+set chainB [atomselect top "protein and not hydrogen and not resname ACE NME"]
 set chainX [atomselect top "residuetype nothing and not resname ACE NME"]
 set flag 1
 } else {
-set chainB [atomselect top "chain B and not hydrogen"]
+set chainB [atomselect top "protein and not hydrogen"]
 set chainX [atomselect top "residuetype nothing"]
 set flag 0}
 $chainB writepdb chainB.pdb
