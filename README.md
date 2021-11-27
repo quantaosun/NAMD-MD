@@ -35,6 +35,8 @@ NOTE, you need to include the provided water topology/parameter files in the con
 The configuration file need modification, like the "parameters" lines, and the PBC section.
 ![image](https://user-images.githubusercontent.com/75652473/138555517-f6562583-030c-4fa1-944c-a8d42bbbfe3a.png)
 
+If you want to set up a restrain before the simulation, have a look at http://www.ub.edu/cbdd/?q=content/using-namd-harmonic-restraints
+
 
 
 
