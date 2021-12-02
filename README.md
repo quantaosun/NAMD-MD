@@ -38,4 +38,4 @@ jupyter notebook
 The NAMD-MD.ipynb include how to set up a general solution MD, proteins with membrane also discussed, it was designed use on Colab.
 The NAMD-MD_local.opynb is a consised version only for a soution system without membrane, designed to use on local linux system.
 
-You could also use this script to simulate a docked complex, but in that case, more extra work outside of this notebook are supposed to be done.
+You could also use this script to simulate a docked complex, but in that case, more extra work outside of this notebook supposed to be done.
