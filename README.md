@@ -13,3 +13,16 @@ You could also use this script to simulate a docked complex, but in that case, m
 
 If you want to set up a restrain before the simulation, have a look at http://www.ub.edu/cbdd/?q=content/using-namd-harmonic-restraints
 and http://www.ks.uiuc.edu/Research/namd/mailing_list/namd-l.2009-2010/0751.html 
+
+# How to use this repository on your personal linux ?
+
+$ git clone https://github.com/quantaosun/NAMD-MD
+$ cd NAMD-MD
+$ conda create -n NAMD-MD python=3.7
+$ conda activate NAMD-MD
+$ (NAMD-MD) conda install jupyter
+$ (NAMD-MD) jupyter notebook NAMD-MD_local.ipynb
+# If you have problem opening jupyter notebook in your "NAMD-MD" environment, try
+$ conda remove jupyter
+$ sudo apt isntall jupyter
+$ jupyter notebook
