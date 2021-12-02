@@ -1,6 +1,7 @@
 # NAMD-MD
 This repository is based on softwares developed by https://www.ks.uiuc.edu/, anyone who potentially use this to generate any publications should refer to original NAMD/VMD papers.
 # Usage
+It is assumed you already got anaconda installed on your linux computer, visit https://docs.anaconda.com/# to get one.
 ```
 git clone https://github.com/quantaosun/NAMD-MD
 ```
