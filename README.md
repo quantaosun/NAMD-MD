@@ -24,7 +24,7 @@ Start jupyter notebook and run the "NAMD-MD_local.ipynb"
 jupyter notebook NAMD-MD_local.ipynb
 ```
 
-# If you have problem opening jupyter notebook in your "NAMD-MD" environment, try to uninstall the previous jupyter, reinstall with apt install
+# If you have problem opening jupyter notebook in your "NAMD-MD" environment, try 
 ```
 conda remove jupyter
 ```
@@ -37,10 +37,5 @@ jupyter notebook
 
 The NAMD-MD.ipynb include how to set up a general solution MD, proteins with membrane also discussed, it was designed use on Colab.
 The NAMD-MD_local.opynb is a consised version only for a soution system without membrane, designed to use on local linux system.
-
-You could use namd configuration files listed above, or generate your own, some references are 
-https://www.iitg.ac.in/tamalb/karp/namd/cf.html and https://www.ks.uiuc.edu/Training/Tutorials/namd/namd-tutorial-unix-html/node26.html 
-
-This notebook take http://zarbi.chem.yale.edu/ligpargen/namd_tutorial.html as a general refernce
 
 You could also use this script to simulate a docked complex, but in that case, more extra work outside of this notebook are supposed to be done.
