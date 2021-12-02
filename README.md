@@ -35,8 +35,8 @@ sudo apt install jupyter
 jupyter notebook
 ```
 
-The NAMD-MD.ipynb include how to set up a general solution MD and proteins with membrane, it was designed use on Colab.
-The NAMD-MD_local.opynb is a consised version designed to use on local linux system. For beginners, the local version is advised, for clarity reason.
+The NAMD-MD.ipynb include how to set up a general solution MD, proteins with membrane also discussed, it was designed use on Colab.
+The NAMD-MD_local.opynb is a consised version only for a soution system without membrane, designed to use on local linux system.
 
 You could use namd configuration files listed above, or generate your own, some references are 
 https://www.iitg.ac.in/tamalb/karp/namd/cf.html and https://www.ks.uiuc.edu/Training/Tutorials/namd/namd-tutorial-unix-html/node26.html 
