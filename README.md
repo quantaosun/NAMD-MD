@@ -29,7 +29,7 @@ jupyter notebook NAMD-MD_local.ipynb
 conda remove jupyter
 ```
 ```
-sudo apt isntall jupyter
+sudo apt install jupyter
 ```
 ```
 jupyter notebook
