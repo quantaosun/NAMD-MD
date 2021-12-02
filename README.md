@@ -1,6 +1,6 @@
 # NAMD-MD
 This repository is based on softwares developed by https://www.ks.uiuc.edu/, anyone who potentially use this to generate any publications should refer to original NAMD/VMD papers.
-# How to use this repository on your personal linux ?
+# Usage
 ```
 git clone https://github.com/quantaosun/NAMD-MD
 ```
