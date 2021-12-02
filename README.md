@@ -16,13 +16,19 @@ and http://www.ks.uiuc.edu/Research/namd/mailing_list/namd-l.2009-2010/0751.html
 
 # How to use this repository on your personal linux ?
 
-$ git clone https://github.com/quantaosun/NAMD-MD
-$ cd NAMD-MD
-$ conda create -n NAMD-MD python=3.7
-$ conda activate NAMD-MD
-$ (NAMD-MD) conda install jupyter
-$ (NAMD-MD) jupyter notebook NAMD-MD_local.ipynb
+```
+git clone https://github.com/quantaosun/NAMD-MD
+cd NAMD-MD
+conda create -n NAMD-MD python=3.7
+conda activate NAMD-MD
+(NAMD-MD) conda install jupyter
+(NAMD-MD) jupyter notebook NAMD-MD_local.ipynb
+```
+
 # If you have problem opening jupyter notebook in your "NAMD-MD" environment, try
-$ conda remove jupyter
-$ sudo apt isntall jupyter
-$ jupyter notebook
+```
+conda remove jupyter
+sudo apt isntall jupyter
+jupyter notebook
+```
+
