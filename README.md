@@ -1,7 +1,6 @@
 # NAMD-MD
 
 # How to use this repository on your personal linux ?
-
 ```
 git clone https://github.com/quantaosun/NAMD-MD
 ```
@@ -11,24 +10,30 @@ cd NAMD-MD
 Create a new Conda environment named "NAMD-MD"
 ```
 conda create -n NAMD-MD python=3.7
+```
+Activate the new environment 
+```
 conda activate NAMD-MD
 ```
 In the new environment, install jupyter notebook
 ```
-(NAMD-MD) conda install jupyter
+conda install jupyter
 ```
 Start jupyter notebook and run the "NAMD-MD_local.ipynb"
 ```
-(NAMD-MD) jupyter notebook NAMD-MD_local.ipynb
+jupyter notebook NAMD-MD_local.ipynb
 ```
 
-# If you have problem opening jupyter notebook in your "NAMD-MD" environment, try
+# If you have problem opening jupyter notebook in your "NAMD-MD" environment, try to uninstall the previous jupyter, reinstall with apt install
 ```
 conda remove jupyter
+```
+```
 sudo apt isntall jupyter
+```
+```
 jupyter notebook
 ```
-
 
 The NAMD-MD.ipynb include how to set up a general solution MD and proteins with membrane, it was designed use on Colab.
 The NAMD-MD_local.opynb is a consised version designed to use on local linux system. For beginners, the local version is advised, for clarity reason.
