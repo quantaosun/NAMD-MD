@@ -1,0 +1,149 @@
+#############################################################
+## JOB DESCRIPTION                                         ##
+#############################################################
+
+# Equilibration of 500 molecules of 
+
+
+#############################################################
+## ADJUSTABLE PARAMETERS                                   ##
+#############################################################
+
+set inputname      nvt          ;# only need to edit this in one place!
+coordinates       ionized.pdb
+structure        ionized.psf
+
+binCoordinates     $inputname.coor  ;# coordinates from last run (binary)
+binVelocities      $inputname.vel   ;# velocities from last run (binary)
+extendedSystem	   $inputname.xsc   ;# cell dimensions from last run
+firsttimestep      251000            ;# last step of previous run
+
+#numsteps           100000           ;# run stops when this step is reached
+
+set temperature    310 ;# you don't need a thermal since you continued with a bin velocity file already
+set outputname     npt
+set restart	   0
+
+# Continuing a job from the restart files
+if {$restart} {
+set inputname      $outputname
+Coordinates        ../$inputname.restart.coor
+Velocities         ../$inputname.restart.vel  ;# remove the "temperature" entry if you use this!
+extendedSystem	   ../$inputname.restart.xsc
+} 
+
+#firsttimestep      0
+
+
+#############################################################
+## SIMULATION PARAMETERS                                   ##
+#############################################################
+
+# Input
+paraTypeCharmm	    on
+
+parameters                        top_all36_prot.prm
+parameters                        UNK_FB41F7.prm
+parameters                        toppar_water_ions.mod.str
+ 
+if {$restart-1} {
+#temperature         $temperature
+}
+
+# Force-Field Parameters
+exclude             scaled1-4
+1-4scaling          0.5
+cutoff              12.0
+switching           on
+switchdist          10.5
+pairlistdist        13.5
+
+
+# Integrator Parameters
+timestep            2.0  ;# 1fs/step
+rigidBonds          all  ;# needed for 2fs steps
+nonbondedFreq       1
+vdwGeometricSigma   yes
+fullElectFrequency  2  
+stepspercycle       20
+pairlistsperCycle   2
+
+# Periodic Boundary Conditions
+if {0} {
+cellBasisVector1 63 0 0
+cellBasisVector2 0 74 0
+cellBasisVector3 0 0  126
+cellOrigin 9.57 11.23 -60.5
+
+# PME (for full-system periodic electrostatics)
+PME                 yes
+PMEGridSpacing      1.0
+
+PME yes
+PMEGridSizeX 64 ;# 2^6
+PMEGridSizeY 80 ;# 2^4*5
+PMEGridSizeZ 128 ;# 4^3*2
+}
+wrapAll             on
+
+# Constant Temperature Control
+if {1} {
+langevin            on    ;# do langevin dynamics
+langevinDamping     1     ;# damping coefficient (gamma) of 1/ps
+langevinTemp        $temperature
+langevinHydrogen    off    ;# don't couple langevin bath to hydrogens
+}
+
+# Constant Pressure Control (variable volume)
+if {1} {
+useGroupPressure      yes ;# needed for rigidBonds
+useFlexibleCell       no
+useConstantArea       no
+
+langevinPiston        on
+langevinPistonTarget  1.01325 ;#  in bar -> 1 atm
+langevinPistonPeriod  100.0
+langevinPistonDecay   50.0
+langevinPistonTemp    $temperature
+}
+
+# Fixed Atoms Constraint (set PDB beta-column to 1)
+if {0} {
+fixedAtoms          on
+#fixedAtomsForces    on #Is it necessary?
+fixedAtomsFile      ../../02_Heating/IL20-Mixed_heat.coor
+fixedAtomsCol       B
+}
+
+# IMD Settings (can view sim in VMD)
+if {0} {
+IMDon           on
+IMDport         3000    ;# port number (enter it in VMD)
+IMDfreq         1       ;# send every 1 frame
+IMDwait         no      ;# wait for VMD to connect before running?
+}
+
+# Output
+outputName          $outputname
+
+restartfreq         10000     ;# 10000 steps = every 20 ps
+dcdfreq             5000
+outputEnergies      500
+outputPressure      500
+
+#binaryoutput		no
+#binaryrestart		no
+
+#############################################################
+## EXTRA PARAMETERS                                        ##
+#############################################################
+
+
+#############################################################
+## EXECUTION SCRIPT                                        ##
+#############################################################
+
+# Equilibration
+#seed				1010				# Random number seed used to generate initial Maxwell distribution of velocities	
+#numsteps			10000				# Number of integration steps
+run        500000
