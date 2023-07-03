@@ -4,9 +4,9 @@
  
  - VMD (https://www.ks.uiuc.edu/), 
  - NAMD (https://www.ks.uiuc.edu/) and
- - py3Dmol (https://github.com/avirshup/py3dmol), as well as
- - Open babel (https://github.com/openbabel/openbabel) are the main components contained in this protocol.The force file package used is
- - Charmm as per https://www.charmm.org/charmm/resources/charmm-force-fields/ for protein, small molecules are parameterized by web server 
+ - py3Dmol (https://github.com/avirshup/py3dmol)
+ - Open babel (https://github.com/openbabel/openbabel) 
+ - Charmm as per https://www.charmm.org/charmm/resources/charmm-force-fields/ for protein 
  - LigPargen (http://zarbi.chem.yale.edu/ligpargen/).
 
 
