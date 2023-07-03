@@ -10,8 +10,7 @@ There are two ways you could use this workflow,
 
 ## 2. Run this procedure on Colab directly where all dependencies are installed on the fly each time you use it
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
-(https://github.com/quantaosun/NAMD-MD/blob/main/NAMD-MD.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/quantaosun/NAMD-MD/blob/main/NAMD-MD.ipynb)
 
 
 
