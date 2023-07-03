@@ -1,6 +1,9 @@
 # NAMD-MD
+
+NAMD-MD.ipynb is up to date to July 2023
+
 # Reminder
-You can finish all the process in google colab, the difference to a local procedure would be you need run some command in terminal. Another reminder is you should remove the duplicated chain before dive into topology generation.
+You can finish all the processes in google colab, the difference to a local procedure would be you need to run some commands in the terminal. Another reminder is you should remove the duplicated chain before diving into topology generation.
 ![image](https://user-images.githubusercontent.com/75652473/172390288-d567c9d3-a7a0-4b2e-9d37-87507f43c1b5.png)
 
 
@@ -13,12 +16,12 @@ to keep only one chain (fixer.removeChains(chainIds='B')), and fix other problem
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
- This repository try to introduce molecular dynamics of protein-ligand complex to more people, especially those beginners, with all open-souuced resouces. VMD (https://www.ks.uiuc.edu/), NAMD (https://www.ks.uiuc.edu/) and py3Dmol (https://github.com/avirshup/py3dmol), as well as open babel (https://github.com/openbabel/openbabel) are the main components contained in this protocal. The force file package used is charmm as per https://www.charmm.org/charmm/resources/charmm-force-fields/ for protein, small moleucles are paramerized by web server LigPargen (http://zarbi.chem.yale.edu/ligpargen/).
+ This repository tries to introduce molecular dynamics of the protein-ligand complex to more people, especially those beginners, with all open-sourced resources. VMD (https://www.ks.uiuc.edu/), NAMD (https://www.ks.uiuc.edu/) and py3Dmol (https://github.com/avirshup/py3dmol), as well as open babel (https://github.com/openbabel/openbabel) are the main components contained in this protocol. The force file package used is charmm as per https://www.charmm.org/charmm/resources/charmm-force-fields/ for protein, small molecules are parameterized by web server LigPargen (http://zarbi.chem.yale.edu/ligpargen/).
 
-This is designed only for learning purpose, anyone with commercial purpose might need to check out by themself if they need a commercial license in relation to some certain package, even these are all "open source".
+This is designed only for learning purposes, anyone with commercial purposes might need to check out by themself if they need a commercial license in relation to some certain package, even if these are all "open source".
 
 # Usage
-It is assumed you already got anaconda installed on your linux computer, visit https://docs.anaconda.com/# to get one if not installed.
+It is assumed you already got Anaconda installed on your Linux computer, visit https://docs.anaconda.com/# to get one if not installed.
 ```
 git clone https://github.com/quantaosun/NAMD-MD
 ```
